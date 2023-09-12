@@ -343,7 +343,7 @@ VANTA.TOPOLOGY({
       <form id="contact" action="https://formsubmit.co/mohammedelabridi2004@gmail.com" method="POST">
         <input type="text" name="_honey" style="display: none;">
         <input type="hideen" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="show_notification">
+        <input type="hidden" name="_next" value="https://altecai.me">
         <div class="row">
           <div class="col-lg-6 offset-lg-3">
             <div class="section-heading">
@@ -382,58 +382,12 @@ VANTA.TOPOLOGY({
             </fieldset>
           </div>
         </div>
-        <div id="notification" class="toast">
-          <div class="toast-content">
-            <i class="fas fa-solid fa-check check"></i>
-            <div class="message">
-              <span class="text text-1">Success</span>
-              <span class="text text-2">Your message has been sent</span>
-            </div>
-          </div>
-          <i class="fa-solid fa-xmark close"></i>
-          <div class="progress active"></div>
-        </div>
       </form>
     </div>
   </div>
 </div>
 
 
-<script>
-  // Your JavaScript code here
-  const toast = document.querySelector("#notification");
-  const closeIcon = toast.querySelector(".close");
-  const progress = toast.querySelector(".progress");
-
-  let timer1, timer2;
-
-  closeIcon.addEventListener("click", () => {
-    toast.classList.remove("active");
-
-    setTimeout(() => {
-      progress.classList.remove("active");
-    }, 300);
-
-    clearTimeout(timer1);
-    clearTimeout(timer2);
-  });
-
-  // Check the _next value and show the notification accordingly
-  const nextValue = document.querySelector('input[name="_next"]').value;
-  if (nextValue === "show_notification") {
-    // Show the notification here (you can trigger it programmatically)
-    toast.classList.add("active");
-    progress.classList.add("active");
-
-    timer1 = setTimeout(() => {
-      toast.classList.remove("active");
-    }, 5000); // 1s = 1000 milliseconds
-
-    timer2 = setTimeout(() => {
-      progress.classList.remove("active");
-    }, 5300);
-  }
-</script>
 
       
 <footer>
